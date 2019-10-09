@@ -26,4 +26,8 @@ Copy examples5 folder to root of your web server and use Internet Explorer brows
 
 ## How to integrate Aceoffix into your web project
 
+[How to integrate Aceoffix into your web project](https://github.com/aceoffix/AceoffixforJava/blob/master/how%20to%20integrate%20Aceoffix.md)
 
+## How to support all the browsers
+
+[How to support all the browsers](https://github.com/aceoffix/AceoffixforJava/blob/master/How%20to%20support%20all%20the%20browsers.md)
