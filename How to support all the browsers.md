@@ -55,7 +55,7 @@ Refer to examples5 /index.jsp to learn how to change the old link to new link.
 
  ![](https://github.com/aceoffix/AceoffixforJava/blob/master/examples5/image/support_2.png?raw=true)
 
-For example: The old link is <a href=”word/editword.jsp”>Edit Word document</a>
+For example: The old link is `<a href=”word/editword.jsp”>Edit Word document</a>`
 
 The new link:
 
