@@ -2,6 +2,7 @@
 
 1. Copy the examples5\WEB-INF\lib\aceoffix5.6.0.1.jar to the WEB-INF\lib folder of your website.
  
+![截图1](https://github.com/aceoffix/AceoffixforJava/blob/master/examples5/image/integrate_1.png?raw=true)
 
 2. Add the following code to the web.xml of your web site:
 
@@ -75,3 +76,4 @@ Write the savefile.jsp if your user want to save his/her document.
     
 4. Congratulations. Your user can open, edit, save the Word documents in your web project online now. You have finished the integration of Aceoffix. Please refer to the examples5 to learn how to use more features of Aceoffix.
  
+![截图2](https://github.com/aceoffix/AceoffixforJava/blob/master/examples5/image/integrate_2.png?raw=true)
