@@ -1,0 +1,202 @@
+/*
+	Todd Motto Labs
+	URL: www.toddmotto.com
+*/
+
+/*------------------------------------*\
+    Flaunt JS Navigation
+\*------------------------------------*/
+
+.nav {
+	position:relative;
+	display:inline-block;
+	width:100%;
+}
+.nav-list {
+	text-align:left;
+}
+.nav-list ol, .nav-list li { list-style:none;}
+.page_item {
+	float:left;
+	*display:inline;
+	zoom:1;
+	position:relative;
+}
+.page_item a {
+	font-weight:400;
+	display:block;
+	color:#2c2c2c;
+	font-size:15px;
+	text-transform:uppercase;
+	padding:0 18px;
+	line-height:70px;
+}
+.page_item.current_page_item a {
+	background:#19a5df;
+	color:#fff;
+	}
+.page_item.current_page_item a:hover {
+	background:#19a5df;
+	color:#fff;
+	}
+.page_item > a:hover {
+	background:#19a5df;
+	color:#fff;
+	
+}
+.page_item:hover .nav-submenu {
+	display:block;
+}
+
+.nav-submenu-item a:hover > .page_item li a {
+    background-color: #eb1f10;
+    color: #FFF;
+}
+
+/* Navigation submenu */
+.nav-submenu {
+	display:none;
+	position:absolute;
+	left:0;
+	z-index:3000;
+	width:220px;
+	padding:0;
+	/*box-shadow: 0px 1px 1px rgba(0,0,0,0.8);*/
+}
+.nav-submenu-item a {
+	display:block;
+	color:#fff;
+	background:#19a5df;
+	line-height:36px;
+}
+.nav-submenu-item a:hover {
+	background:#19a5df;
+	color:#0f75bc;
+}
+
+.nav-submenu-item.current_page_item a {
+	display:block;
+	width:184px;
+}
+	
+	
+/* Mobile navigation */
+.nav-mobile {
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	position:absolute;
+	top:0;
+	right:2%;
+	background: url(nav.svg) no-repeat center center;
+	background-size:32px;
+	height:70px;
+	width:50px;
+	
+}
+/* Mobile navigation, clickable area for revealing <ul> */
+.nav-click {
+	position:absolute;
+	top:0;
+	right:0;
+	display:none;
+	border-left:1px solid #00366b;
+	height:30px;
+	width:30px;
+	cursor:pointer;
+}
+.nav-click i {
+	display:block;
+	height:46px;
+	width:46px;
+	background:#19a5df url(drop.svg) no-repeat center center;
+	background-size:20px;
+	position:relative;
+	z-index:300;
+	top:0px;
+	right:15px;
+}
+.nav-click:hover {
+	background-color:#00366b;
+}
+.nav-rotate {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+	.nav-mobile {
+		display:block;
+	}
+	.nav {
+		width:100%;
+		padding:70px 0 0;
+		
+	}
+	.nav-list {
+		display:none;
+	}
+	.page_item {
+		width:100%;
+		float:none;
+	}
+	.page_item a {
+		position:relative;
+		top:0px;
+		z-index:200;
+		background:#19a5df;
+		color:#fff;
+		border-bottom:1px solid #fff;
+		line-height:46px;
+		font-size:20px;
+		text-align:center;
+	}
+	.page_item > a {
+		padding:0px;
+	}
+	.page_item > a:hover {
+		background: #fff;
+		color:#0f75bc;
+	}
+	.nav-click {
+		display:block;
+	}
+	.nav-mobile-open {
+		border-radius:5px 5px 0 0;
+		-webkit-border-radius:5px 5px 0 0;
+		-moz-border-radius:5px 5px 0 0;
+	}
+	.page_item:hover .nav-submenu {
+		display:none;
+	}
+	.page_item.current_page_item a {
+		background: #222;
+		color:#fff;
+	}
+	.page_item.current_page_item a:hover {
+		background: #222;
+		color:#6d6e70;
+	}
+	
+	.nav-submenu {
+		position:static;
+		width:100%;
+	}
+	
+	.nav-submenu-item a {
+		color:#fff;
+		background:#2a2a2a;
+	}
+	
+	.nav-submenu-item a:hover {
+		background:#fff;
+		color:#19a5df;
+	}
+}

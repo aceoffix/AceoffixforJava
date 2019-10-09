@@ -1,0 +1,179 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Content
+==================================================
+	#Reset & Basics
+	#Basic Styles
+	#Site Styles
+	#Typography
+	#Links
+	#Lists
+	#Images
+	#Buttons
+	#Forms
+	#Misc */
+
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+
+
+/* #Basic Styles
+================================================== */
+	body {
+		background: #fff;
+		font-family: 'Roboto', sans-serif;
+		font-size:15px;
+		line-height:22px;
+		font-weight:400;
+		color: #454545;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;
+		word-wrap:break-word;
+ }
+
+
+/* #Typography
+================================================== */
+	h1, h2, h3, h4, h5, h6 {
+		color: #19a5df;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 700; }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 28px; line-height: 36px; margin-bottom: 20px;}
+	h2 { font-size: 26px; line-height: 36px; margin-bottom: 10px; color:#414343; }
+	h3 { font-size: 22px; line-height: 30px; margin-bottom: 10px;}
+	h4 { font-size: 18px; line-height: 30px; margin-bottom: 4px; font-weight:400;}
+	h5 { font-size: 17px; line-height: 24px; }
+	h6 { font-size: 14px; line-height: 21px; }
+	.subheader { color: #777; }
+
+	p { margin: 0 0 20px 0; text-align:left; }
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+
+	em { font-style: italic; }
+	strong { font-weight: bold; }
+	small { font-size: 80%; }
+
+/*	Blockquotes  */
+	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
+	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+	blockquote cite { display: block; font-size: 12px; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+/* Links
+================================================== */
+	a, a:visited { color: #6d7e81; text-decoration: none; outline: 0; }
+	a { -o-transition: all .2s linear; -moz-transition: all .2s linear;  -webkit-transition: all .2s linear;  transition: all .2s linear; }
+	a:hover, a:focus { color: #3d3d3d; }
+	p a, p a:visited { line-height: inherit; }
+
+
+/* #Lists
+================================================== */
+	/*ul, ol { margin-bottom: 20px; }
+	ul { list-style: none outside; }
+	ol { list-style: decimal; }
+	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 6px; }
+	li { line-height: 18px; margin-bottom: 12px; }
+	ul.large li { line-height: 21px; }
+	li p { line-height: 21px; }*/
+
+/* #Images
+================================================== */
+
+	img.scale-with-grid {
+		max-width: 100%;
+		height: auto; }
+
+
+
+/* #Misc
+================================================== */
+	#toTop {
+		width:36px;
+		border:0px solid #ccc;
+		text-align:center;
+		padding:5px;
+		position:fixed; /* this is the magic */
+		bottom:30px; /* together with this to put the div at the bottom*/
+		right:10px;
+		cursor:pointer;
+		display:none;
+		opacity:0.5;
+		z-index:2000;
+	}
+	#toTop:hover { opacity:1;}
+
+
+/* Form Elements
+================================================== */
+/* Fix for odd Mozilla border & padding issues */
+/*button::-moz-focus-inner,
+input::-moz-focus-inner { border: 0; padding: 0; }
+form p { margin-bottom:10px; padding:0; display:block;}
+label { display:block; width:25%; float:left; font-size:12px; line-height:27px; }
+input[type=text], input[type=email], input[type=password], input[type=tel], select { font:inherit; font-size:14px; background: #fff; border:solid 1px #C4C4C4; padding:1%; width:98%; margin-left:0; height:22px; -webkit-border-radius:3px; -o-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+select { height:27px;}
+textarea { height:80px; font:inherit; font-size:14px; background: #fff; border:solid 1px #C4C4C4; padding:1%; width:98%; margin-left:0; margin-top:0px; -webkit-border-radius:3px; -o-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+input[type=submit], a.link-button { font:inherit; font-size:14px; background: #0095cd; color:#fff; padding: 6px 25px; width:auto; border:0px; cursor:pointer; text-align: center; text-transform:uppercase; -webkit-border-radius:3px; -o-border-radius:3px; -moz-border-radius:3px; border-radius:3px; }
+input[type=submit]:hover, a.link-button:hover, a.browse:hover { background: #222; color:#fff; }*/
+
+
+/* Table Elements
+================================================== */
+table { border:1px solid #ccc;}
+table td { padding:10px;}
+
+table td {border-top:1px solid #ccc;}
+table td:first-child:before { border-top:1px solid #ccc;}
+
+
+
+
+
+
+
+

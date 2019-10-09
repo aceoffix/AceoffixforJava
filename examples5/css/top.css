@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+ A { 
+color:#3354aa; text-decoration:none; border-bottom:0px; border-left:0px; padding-bottom:0px; margin:0px; outline-style:none; outline-color:invert; padding-left:0px; outline-width:0px; padding-right:0px; background:none transparent scroll repeat 0% 0%; font-size:100%; vertical-align:baseline; border-top:0px; border-right:0px; padding-top:0px
+}  
+A:hover {  
+border-bottom:medium none; color:#444
+}  
+.back-to {  
+z-index:999; position:fixed; width:110px; bottom:35px; overflow:hidden; right:10px	
+
+}  
+.back-to .back-top {  
+text-indent:-9999em; outline-style:none; outline-color:invert; outline-width:0px; width:50px; display:block; background:url(../images/bt.png) no-repeat 0px 0px; float:right; height:50px; margin-left:10px
+}  
+.back-to .back-top:hover { 
+background-position:-50px 0px
+}
+
+
+
+

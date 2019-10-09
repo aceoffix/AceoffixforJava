@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        #tagTable td{ height:25px; border-bottom:dotted 1px gray;}
+    </style>
+    <script type="text/javascript">
+
+        var names = window.external.CallParentFunc("getTagNames", ""); 
+        var tagArr = names.split(";");
+
+        
+        function load() {
+            searchBookMark('');
+            return;
+        }
+        
+        function searchBookMark(s) {
+         
+            var tb1 = document.getElementById("tagTable");
+            var rCount = tb1.rows.length;
+            for (var i = 0; i < rCount; i++) {
+                tb1.deleteRow(0);
+            }
+          
+            var oTable = document.getElementById("tagTable");
+            for (var i = 0; i < tagArr.length; i++) {
+                if (tagArr[i] != null && tagArr[i] != "" && 0 == tagArr[i].toLocaleLowerCase().indexOf(s.toLocaleLowerCase())) {
+                    var oTr = oTable.insertRow();
+                    var oTd = oTr.insertCell();
+                    oTd.innerHTML = tagArr[i];
+                    oTd = oTr.insertCell();
+                    oTd.innerHTML = "&nbsp;&nbsp;<a href=\"javascript:void(0);\"  onclick= \"add('" + tagArr[i] + "','aaaa')\">&nbsp;Add</a>";
+                    oTd = oTr.insertCell();
+                    oTd.innerHTML = "&nbsp;&nbsp;<a href=\"javascript:void(0);\"  onclick= \"locate('" + tagArr[i] + "')\">&nbsp;Location</a>";
+                    oTd = oTr.insertCell();
+                    oTd.innerHTML = "&nbsp;&nbsp;<a href=\"javascript:void(0);\"  onclick= \"del('" + tagArr[i] + "')\">&nbsp;Delete</a>";
+                }
+            }
+        }
+      
+
+        function Button1_onclick() {
+
+            var s = document.getElementById("Text1").value.toLocaleLowerCase();
+            var tb1 = document.getElementById("tagTable");
+            var rCount = tb1.rows.length;
+            for (var i = 0; i < rCount; i++) {
+                tb1.deleteRow(0);
+            }
+
+            var oTable = document.getElementById("tagTable");
+            for (var i = 0; i < tagArr.length; i++) {               
+                if (tagArr[i] != null && tagArr[i] != "" && tagArr[i].toLocaleLowerCase().indexOf(s) >= 0) {
+
+                    var oTr = oTable.insertRow();
+                    var oTd = oTr.insertCell();
+                    oTd.innerHTML = tagArr[i];
+                    oTd = oTr.insertCell();
+                    oTd.innerHTML = "&nbsp;&nbsp;<a href=\"javascript:void(0);\"  onclick= \"add('" + tagArr[i] + "')\">&nbsp;Add</a>";
+                    oTd = oTr.insertCell();
+                    oTd.innerHTML = "&nbsp;&nbsp;<a href=\"javascript:void(0);\"  onclick= \"locate('" + tagArr[i] + "')\">&nbsp;Location</a>";
+                    oTd = oTr.insertCell();
+                    oTd.innerHTML = "&nbsp;&nbsp;<a href=\"javascript:void(0);\"  onclick= \"del('" + tagArr[i] + "')\">&nbsp;Delete</a>";
+                }
+            }
+        }
+
+
+       
+
+        function add(name) {
+            if ("true" ==  window.external.CallParentFunc("addTag", name)) {
+
+            }
+        }
+
+        function del(name) {//alert(name);
+            if ("false" == window.external.CallParentFunc("delTag",  name)) {
+                alert("Please locate the DataTag first and then delect it.");
+            }
+        }
+
+        function locate(name) {
+
+            window.external.CallParentFunc("locateTag", name); 
+        } 
+
+    </script>
+</head>
+<body>
+    <div style="width: 380px; height: 320px;">
+        <div style="float: left;font-size:12px;">
+            <span>DataTags to be added:</span><br />
+            <input id="Text1" type="text" onpropertychange="searchBookMark(this.value);" oninput="searchBookMark(this.value);"   />
+            <input id="Button1" type="button" value="Search" onclick="return Button1_onclick()" />
+            <div style="width: 380px; height: 300px; border: solid 1px #ccc; overflow-y: scroll;  ">
+                <table id="tagTable" style=" font-size:12px;">
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+    load();
+    //alert(2);
+</script>
+</html>
